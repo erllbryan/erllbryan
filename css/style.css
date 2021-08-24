@@ -19,10 +19,7 @@ a {
 	transition: all .35s;
 }
 
-a:hover {
-	color: #dadada;	
-	text-decoration: underline;
-}
+
 
 
 .wrapper {
@@ -243,11 +240,13 @@ h4 {
 	font-size: 1.1em;
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
+
 }
 
 .navbar-default .navbar-nav>li>a:hover {
 	color: #999999;
-}
+	letter-spacing: 2px;
+} 
 
 .nav>li>a {
     padding: 20px;
@@ -269,6 +268,7 @@ h4 {
 .navbar-default .navbar-nav > .active > a:focus {
     color: #4f4d47;
 	background-color: transparent;
+
 }
 
 }
@@ -306,6 +306,8 @@ h4 {
     color: #4f4d47;
 	background-color: transparent;
 	border-color: #4f4d47;	
+	letter-spacing: 2px;
+	
 }
 
 .home1-btn {
@@ -330,7 +332,29 @@ h4 {
 .main-image {
 	margin-top: 20px;
 	z-index:1;
+	animation: morph 8s ease-in-out infinite 0s;
+	background-blend-mode: overlay;
+	-webkit-box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);
+    -moz-box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);
+    box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);
 }
+
+
+@keyframes morph {
+	 0% {
+		 border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+	}
+	 50% {
+		 border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+	}
+	 100% {
+		 border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+	}
+}
+
+
+
+
 
 
 .box-home {
@@ -374,11 +398,11 @@ h4 {
 
 
 .first .square {
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
     border: 15px solid white;
     position: absolute;
-    top: 87px;
+    top: 95px;
     right: 41px;
     z-index: 1;
 }
@@ -407,14 +431,40 @@ h4 {
 	margin-top: 59px;
 	margin-bottom: 30px;
 	margin-left: 5px;
+	
 }
-
 
 .text-about {
     font-size: 1em;
 	font-weight: 400;
 	text-transform: uppercase;
     color: #4f4d47;
+}
+
+.progress{
+    height:2px;
+    border-radius: 0;
+    box-shadow: none;
+    line-height: 35px;
+    background:#d6d6d6;
+}
+.progressbar-title{
+    color:#333;
+    font-size:15px;
+    margin:5px 0 5px;
+}
+.progressbar-value{
+    float: right;
+    display:block;
+}
+.progress .progress-bar{
+    animation: progress 10s;
+}
+@-webkit-keyframes progress{
+    0% { width: 0%;}
+}
+@keyframes progress{
+    0% { width:0%; }
 }
 
 
@@ -425,6 +475,10 @@ h4 {
 
 .margin-services {
 	margin-top: 50px;
+}
+
+.margin-services a{
+	text-decoration: none;
 }
 
 .margin-services p {
@@ -440,7 +494,7 @@ h4 {
     font-size: 1.4em;
 	font-weight: 600;
     color: #4f4d47;
-	margin-top: 140px;
+	margin-top: 160px;
 	text-align: center;
 	font-family: 'Oxygen', sans-serif;
 	line-height: 1.7em;
@@ -455,15 +509,6 @@ h4 {
 	margin-bottom: 86px;
 }
 
-.first-s .square {
-    width: 200px;
-    height: 200px;
-    border: 15px solid white;
-    position: absolute;
-    top: 77px;
-    right: 41px;
-}
-
 
 /* ----------------------------------------------------
 	 Collections page styles
@@ -473,6 +518,7 @@ h4 {
 .margin-collection {
 	margin-top: 30px;
 }
+
 
 .heading-c {
 	font-family: 'Oxygen', sans-serif;
@@ -707,31 +753,20 @@ figure.effect-moses img {
 	transition: opacity 0.35s;
 }
 
-figure.effect-moses h2,
+
 figure.effect-moses p {
 	padding: 20px;
+	margin-top:350px;
 	width: 50%;
 	height: 50%;
 	border-top: 1px solid #fff;
 	color: white;
 }
 
-figure.effect-moses h2 {
-	padding: 20px;
-	width: 50%;
-	height: 50%;
-	text-align: left;
-	-webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-	-webkit-transform: translate3d(10px,10px,0);
-	transform: translate3d(10px,10px,0);
-	font-size: 1.6em;
-}
-
 figure.effect-moses p {
 	float: right;
 	padding: 20px;
-	text-align: right;
+	text-align: left;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
@@ -750,6 +785,8 @@ figure.effect-moses:hover p {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
+
+
 
 figure.effect-moses:hover img {
 	opacity: 0.6;
@@ -789,7 +826,7 @@ figure.effect-moses:hover img {
 
 .date {
 	font-size: 0.8em;
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 
 
@@ -814,6 +851,14 @@ figure.effect-moses:hover img {
     padding: 0 0.25em;
     background: white;
     font-family: 'Qwigley', Helvetica, Sans-serif;	   
+}
+
+.desc a{
+	text-decoration: none;
+}
+
+.desc a:hover{
+	font-weight: 500;
 }
 
 
@@ -863,13 +908,26 @@ h5 .date {
 	text-align: center;
 	line-height: 1.7em;
 	display: block;
-	text-transform: lowercase;
 	font-family: 'Oxygen', sans-serif;	
 }
 
 .photo-news {
 	margin-top: 13px;
 	margin-bottom: 26px;
+}
+
+.margin-news a{
+	text-decoration: none;
+}
+
+
+strong:hover{
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+	letter-spacing: 2px;
 }
 
 
@@ -890,6 +948,9 @@ h5 .date {
 
 #contact-area {
 	margin-top: 25px;
+position: relative;
+right: 25px;
+
 }
 
 #contact-area input, #contact-area textarea {
@@ -934,7 +995,7 @@ h6 {
 	text-align: left;
 	font-family: 'Oxygen', sans-serif;
 	line-height: 1.7em;
-	margin-left: 120px;
+	margin-left: 90px;
 	padding-bottom: 24px;
 }
 
@@ -958,6 +1019,12 @@ h6 span {
 	height: 400px;
 	width: 100%;
 }
+
+.margin-contact a{
+	text-decoration: none;
+}
+
+
 
 
 /* ----------------------------------------------------
@@ -992,6 +1059,7 @@ h6 span {
 
 
 
+
 /* ----------------------------------------------------
 	 Responsive styles
 ------------------------------------------------------- */
@@ -999,6 +1067,13 @@ h6 span {
 
 @media screen and (max-width:1280px) {
 
+.main-image{
+	position: relative;
+	margin-left: 270px;
+	width: 50%;
+	height: auto;
+
+}
 .box-home {
 	margin-top: 97px;
 }
@@ -1054,9 +1129,19 @@ h6 {
 }
 
 
+
+
 }
 
+@media (min-width: 900px) {
+	a:hover {
+		color: #000;	
+		letter-spacing: 2px;
+	
+	}
+ }
 
+ 
 @media screen and (max-width:800px) {
 
 .col-xs-offset-3, .col-xs-offset-1 {
@@ -1185,6 +1270,11 @@ h6 {
 
 @media screen and (max-width:480px) {
 	
+.main-image{
+	width: 100%;
+	height: auto;
+	margin-left: 0;
+}
 h2 {
 	padding-left: 40px;
 	padding-right: 40px;
@@ -1194,10 +1284,14 @@ h2 {
 #contact-area input.submit-button {
 	margin-left: 50px;
 }
+#contact-area{
+	right: 0;
+}
 
 
 h6 {
 	margin-left: 0;
+
 }
 
 .photo-about {
@@ -1223,3 +1317,4 @@ h6 {
 }
 
 }
+
