@@ -52,8 +52,8 @@ p {
 
 
 h1 {
-    font-family: 'Qwigley', Helvetica, Sans-serif;	   
-    font-size: 2.2em;
+    font-family: 'Helvetica', Sans-serif;	   
+    font-size: 3.2em;
 	font-weight: 600;
     color: #4f4d47;
 	margin-top: 50px;
@@ -64,7 +64,7 @@ h1 {
 
 h2 {	
     font-family: 'Oxygen', sans-serif;	
-    font-size: 1em;
+    font-size: 1.7em;
 	font-weight: 400;
 	color: #898989;
 	margin-top: 40px;
@@ -101,7 +101,7 @@ h4 {
 
 
 .heading-inner {
-    font-family: 'Qwigley', Helvetica, Sans-serif;	   
+    font-family: 'Helvetica', Sans-serif;	   
     font-size: 2.2em;
 	font-weight: 600;
     color: #4f4d47;
@@ -113,7 +113,7 @@ h4 {
 
 
 .hr {
-	border-bottom: 2px solid #4f4d47;
+	border-bottom: 2px solid #4b474f;
 	display: block;
 	width: 14px;
 	margin: auto;
@@ -150,25 +150,27 @@ h4 {
 }
 
 .navbar-default .navbar-brand {
-    padding: 10px 12px 14px;
+  
     text-align: center;
     font-family: 'Qwigley', Helvetica, Sans-serif;		
-	font-size: 2.4em;
+	font-size: 2em;
     line-height: normal;
     color: #4f4d47;
 	text-transform: capitalize;
-	margin-top: 38px;
+	margin-top: 10px;
+	margin-left: 35px;
 }
 
 .navbar-default .navbar-brand .title {
     display: block;
-    padding: 10px 0 45px;
+    padding: 5px 0 55px;
     text-align: center;
     font-size: 0.3em;
     font-weight: 400;
 	color: #999999;
     text-transform: lowercase;
 	font-family: 'Oxygen', sans-serif;	
+	
 }
 
 
@@ -190,25 +192,20 @@ h4 {
     background-color: #eee;
     border-color: transparent;
 }
-
-
 @media screen and (min-width:1024px) {
-.brand {
-	display: inherit;
-	margin: 0;
-	padding: 30px 0 14px;
-	text-align: center;
-	font-family: 'Qwigley', Helvetica, Sans-serif;
-	font-size: 4.1em;
-	line-height: normal;
-	color: #4f4d47;
-	text-transform: capitalize;
-}
-}
-
+	.brand {
+		display: inherit;
+		margin: 0;
+		padding: 30px 0 14px;
+		text-align: center;
+		font-family: 'Qwigley', Helvetica, Sans-serif;
+		font-size: 4.1em;
+		line-height: normal;
+		color: #4f4d47;
+		text-transform: capitalize;
+	}
+	}
 @media screen and (min-width:768px) {
-
-
 
 .brand .title {
     display: block;
@@ -335,27 +332,7 @@ h4 {
 .main-image {
 	margin-top: 20px;
 	z-index:1;
-	animation: morph 8s ease-in-out infinite 0s;
-	background-blend-mode: overlay;
-	-webkit-box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);
-    -moz-box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);
-    box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);
 }
-
-
-@keyframes morph {
-	 0% {
-		 border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-	}
-	 50% {
-		 border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-	}
-	 100% {
-		 border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-	}
-}
-
-
 
 
 
@@ -433,8 +410,27 @@ h4 {
 .photo-about {
 	margin-top: 59px;
 	margin-bottom: 30px;
-	margin-left: 5px;
+	margin-left: 100px;
+	width: 75%;
+
+	animation: morph 8s ease-in-out infinite 0s;
+	background-blend-mode: overlay;
+	-webkit-box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);
+    -moz-box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);
+    box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);
 	
+}
+
+@keyframes morph {
+	0% {
+		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+   }
+	50% {
+		border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+   }
+	100% {
+		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+   }
 }
 
 .text-about {
@@ -520,6 +516,7 @@ h4 {
 
 .margin-collection {
 	margin-top: 30px;
+	
 }
 
 
@@ -539,6 +536,7 @@ h4 {
   list-style: none outside none;
   margin: 0 0 40px 0;
   padding: 0;
+ 
 }
 
 .portfolio-filter > li {
@@ -582,6 +580,7 @@ h4 {
 .portfolio-item {
   margin: 0;
   padding:0;
+ 
 }
 
 /* Isotope styles */
@@ -704,24 +703,17 @@ h4 {
 	pointer-events: none;
 }
 
-.grid figure figcaption,
-.grid figure figcaption > a {
+.grid figure figcaption{
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+
 }
-
-
-.grid figure figcaption > a {
-	z-index: 1000;
-	text-indent: 200%;
-	white-space: nowrap;
-	font-size: 0;
-	opacity: 0;
+.grid figure figcaption a{
+	text-decoration: none;
+	color: #fff;
 }
-
 .grid figure h2 {
 	word-spacing: -0.15em;
 	font-weight: 400;
@@ -746,12 +738,12 @@ h4 {
 }
 
 figure.effect-moses {
-	background: -webkit-linear-gradient(-45deg, #EC65B7 0%,#05E0D8 100%);
-	background: linear-gradient(-45deg, #EC65B7 0%,#05E0D8 100%);
+	background: -webkit-linear-gradient(-180deg, #ffffff 0%,#ffffff 100%);
+	background: linear-gradient(-180deg, #ffffff 77%,#000000 95%);
 }
 
 figure.effect-moses img {
-	opacity: 0.85;
+	opacity: 0.98;
 	-webkit-transition: opacity 0.35s;
 	transition: opacity 0.35s;
 }
@@ -763,7 +755,9 @@ figure.effect-moses p {
 	width: 50%;
 	height: 50%;
 	border-top: 1px solid #fff;
-	color: white;
+	color: rgb(255, 255, 255);
+	text-shadow: 1px 1px 0 #000;
+	
 }
 
 figure.effect-moses p {
@@ -792,7 +786,7 @@ figure.effect-moses:hover p {
 
 
 figure.effect-moses:hover img {
-	opacity: 0.6;
+	opacity: 0.85;
 }
 
 
@@ -1070,13 +1064,6 @@ h6 span {
 
 @media screen and (max-width:1280px) {
 
-.main-image{
-	position: relative;
-	margin-left: 270px;
-	width: 50%;
-	height: auto;
-
-}
 .box-home {
 	margin-top: 97px;
 }
@@ -1272,6 +1259,24 @@ h6 {
 
 
 @media screen and (max-width:480px) {
+
+.navbar-brand {
+	position: relative;
+	top:40px;
+	left: 26px;
+	margin: 0;
+}
+
+.navbar-toggle{
+	margin-top: 20px;
+}
+.nav{
+	margin-top: 50px;
+}
+
+.heading-inner{
+	padding-top: 20px;
+}
 	
 .main-image{
 	width: 100%;
@@ -1279,8 +1284,14 @@ h6 {
 	margin-left: 0;
 }
 h2 {
+	font-size: 15px;
 	padding-left: 40px;
 	padding-right: 40px;
+	margin-top: 10px;
+}
+h1{
+	font-size: 1.5em;
+	padding-top: 50px;
 }
 
 
@@ -1298,10 +1309,10 @@ h6 {
 }
 
 .photo-about {
+
 	margin-top: 20px;
 	margin-bottom: 4px;
-	margin-left: 5px;
-}
+	margin-left: 30px;
 
 }
 
