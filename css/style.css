@@ -578,8 +578,9 @@ h4 {
 }
 
 .portfolio-item {
-  margin: 0;
-  padding:0;
+  margin:0;
+  padding: 0;
+  padding-bottom: 3px;
  
 }
 
